@@ -1,0 +1,21 @@
+Index: src/main/java/com/example/demo/HelloServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo;\r\n\r\nimport java.io.*;\r\n\r\nimport jakarta.servlet.http.*;\r\nimport jakarta.servlet.annotation.*;\r\n\r\n@WebServlet(name = \"helloServlet\", value = \"/hello-servlet\")\r\npublic class HelloServlet extends HttpServlet {\r\n    private String message;\r\n\r\n    public void init() {\r\n        message = \"Hello World!\";\r\n    }\r\n\r\n    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {\r\n        response.setContentType(\"text/html\");\r\n        PrintWriter out = response.getWriter();\r\n        out.println(\"<html><body>\");\r\n        out.println(\"<h1>\" + message + \"</h1>\");\r\n        out.println(\"</body></html>\");\r\n    }\r\n\r\n    public void destroy() {\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/com/example/demo/HelloServlet.java b/src/main/java/com/example/demo/HelloServlet.java
+--- a/src/main/java/com/example/demo/HelloServlet.java	
++++ b/src/main/java/com/example/demo/HelloServlet.java	
+@@ -5,9 +5,10 @@
+ import jakarta.servlet.http.*;
+ import jakarta.servlet.annotation.*;
+ 
+-@WebServlet(name = "helloServlet", value = "/hello-servlet")
++@WebServlet(value = "/hello")
+ public class HelloServlet extends HttpServlet {
+-    private String message;
++
++    String message = "hi";
+ 
+     public void init() {
+         message = "Hello World!";

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="demo:war" />
+      <artifact name="demo:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0aa7609c-09a5-4a57-849b-2fe9000dcb83" name="Changes" comment="add db schemas" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Servlet" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2TmpXG8r430XUdvyUIEuRXH30As" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.Tomcat.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.11.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/Program Files/Projects/klonickimaciej/src/main/java",
+    "last_opened_file_path": "D:/Projects/klonickimaciej",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.28309572",
+    "spring.configuration.checksum": "fe01ce2a7fbac8fafaed7c982a04e229",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Program Files\Projects\klonickimaciej\src\main\webapp\document" />
+      <recent name="D:\Program Files\Projects\klonickimaciej\src\main\webapp" />
+      <recent name="D:\Program Files\Projects\klonickimaciej\src\main\webapp\lib" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.demo.service.users" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.demo.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.Tomcat">
+    <configuration name="DocumentServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.DocumentServiceImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.ProjectServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserProjectRelationServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.UserProjectRelationServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.UsersServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceImplTest.shouldAuthenticateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.UsersServiceImplTest" />
+      <option name="METHOD_NAME" value="shouldAuthenticateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="adminPort" value="8006" />
+      <option name="catalinaBase" value="C:\Users\klonickim\.SmartTomcat\klonickimaciej\demo" />
+      <option name="contextPath" value="/demo" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="port" value="8081" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.11" />
+          <option name="path" value="C:/Program Files/apache-tomcat-10.1.11" />
+          <option name="version" value="10.1.11.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.DocumentServiceImplTest" />
+      <item itemvalue="JUnit.ProjectServiceImplTest" />
+      <item itemvalue="JUnit.UserProjectRelationServiceImplTest" />
+      <item itemvalue="JUnit.UsersServiceImplTest" />
+      <item itemvalue="JUnit.UsersServiceImplTest.shouldAuthenticateUser" />
+      <item itemvalue="Smart Tomcat.Tomcat" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UsersServiceImplTest.shouldAuthenticateUser" />
+        <item itemvalue="JUnit.UsersServiceImplTest" />
+        <item itemvalue="JUnit.UserProjectRelationServiceImplTest" />
+        <item itemvalue="JUnit.ProjectServiceImplTest" />
+        <item itemvalue="JUnit.DocumentServiceImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-f644763e9732-af3fa2b8" />
+        <option value="jdk-16.0.2-corretto-16.0.2-f644763e9732-d10d28c9" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aa7609c-09a5-4a57-849b-2fe9000dcb83" name="Changes" comment="" />
+      <created>1691658147403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691658147403</updated>
+      <workItem from="1691658148402" duration="84000" />
+      <workItem from="1691658385417" duration="9319000" />
+      <workItem from="1691667904854" duration="8625000" />
+      <workItem from="1691676553525" duration="35000" />
+      <workItem from="1691734010357" duration="25946000" />
+      <workItem from="1692163647210" duration="15255000" />
+      <workItem from="1692180269313" duration="14133000" />
+      <workItem from="1692248322736" duration="23496000" />
+      <workItem from="1692683062093" duration="1000" />
+      <workItem from="1692684043474" duration="15000" />
+      <workItem from="1693302149781" duration="20000" />
+      <workItem from="1712340662071" duration="624000" />
+      <workItem from="1712341299389" duration="1573000" />
+    </task>
+    <task id="LOCAL-00001" summary="Tomcat running with class servlet...">
+      <option name="closed" value="true" />
+      <created>1691658723830</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691658723830</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add model classes to represent tables in DB">
+      <option name="closed" value="true" />
+      <created>1691661495642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691661495642</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add other directiores - database connection, action interface, user repository interface and DTO for user login">
+      <option name="closed" value="true" />
+      <created>1691661945226</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691661945226</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Create userservlet, repo and services to authenticate user - not working yet.">
+      <option name="closed" value="true" />
+      <created>1691671685437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691671685437</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Create classes to login user and views to login">
+      <option name="closed" value="true" />
+      <created>1691749800062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691749800062</updated>
+    </task>
+    <task id="LOCAL-00006" summary="I've made database connection test - db is connected">
+      <option name="closed" value="true" />
+      <created>1691750201547</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691750201547</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Remove createUser method for now">
+      <option name="closed" value="true" />
+      <created>1691750931992</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691750931992</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add error and success views - login user is working correctly">
+      <option name="closed" value="true" />
+      <created>1691754690667</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691754690667</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add user actions added to the web app">
+      <option name="closed" value="true" />
+      <created>1691756781099</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691756781099</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add project action to add new project">
+      <option name="closed" value="true" />
+      <created>1691760434889</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691760434889</updated>
+    </task>
+    <task id="LOCAL-00011" summary="New role to user action added">
+      <option name="closed" value="true" />
+      <created>1691761201957</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691761201957</updated>
+    </task>
+    <task id="LOCAL-00012" summary="New actions added - delete project, and show all project but it is not working yet">
+      <option name="closed" value="true" />
+      <created>1692173076428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692173076429</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Servlet class to show all projects">
+      <option name="closed" value="true" />
+      <created>1692173344617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692173344617</updated>
+    </task>
+    <task id="LOCAL-00014" summary="New action added - edit document is working">
+      <option name="closed" value="true" />
+      <created>1692179338333</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692179338333</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New action added - delete document is working">
+      <option name="closed" value="true" />
+      <created>1692181271850</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1692181271850</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fix for get all projects action - all actions till now are working correctly">
+      <option name="closed" value="true" />
+      <created>1692181519750</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692181519750</updated>
+    </task>
+    <task id="LOCAL-00017" summary="New action added - show projects for user is working correctly">
+      <option name="closed" value="true" />
+      <created>1692182267553</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1692182267553</updated>
+    </task>
+    <task id="LOCAL-00018" summary="New action added - show project details is working correctly">
+      <option name="closed" value="true" />
+      <created>1692182864151</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692182864151</updated>
+    </task>
+    <task id="LOCAL-00019" summary="New action added - show document details is working correctly">
+      <option name="closed" value="true" />
+      <created>1692183847046</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692183847046</updated>
+    </task>
+    <task id="LOCAL-00020" summary="New action added - show documents for user is working correctly. All actions implemented">
+      <option name="closed" value="true" />
+      <created>1692184193636</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1692184193636</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added css for welcome page (login) and add user and add project pages, also added log out button and servlet to handle that logout">
+      <option name="closed" value="true" />
+      <created>1692192599012</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1692192599012</updated>
+    </task>
+    <task id="LOCAL-00022" summary="CSS for views of: add user, add project, add role to user, delete project, get all projects, show projects for user, show project details">
+      <option name="closed" value="true" />
+      <created>1692194277909</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1692194277909</updated>
+    </task>
+    <task id="LOCAL-00023" summary="CSS for document views - all views are looking good now">
+      <option name="closed" value="true" />
+      <created>1692250347462</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1692250347462</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Database fix - connection is good now">
+      <option name="closed" value="true" />
+      <created>1692250836246</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1692250836246</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Tests for document service">
+      <option name="closed" value="true" />
+      <created>1692251888191</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1692251888191</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Tests for project service">
+      <option name="closed" value="true" />
+      <created>1692252265283</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1692252265283</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Tests for user service and userprojectrelation service - all tests are done">
+      <option name="closed" value="true" />
+      <created>1692253225362</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1692253225362</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Update for error page">
+      <option name="closed" value="true" />
+      <created>1692254001494</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1692254001494</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added roles restriction to methods">
+      <option name="closed" value="true" />
+      <created>1692257238390</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1692257238390</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fix for button names">
+      <option name="closed" value="true" />
+      <created>1692258139064</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1692258139064</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add db schemas">
+      <option name="closed" value="true" />
+      <created>1692274912555</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1692274912555</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="maven-packaging:war" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove createUser method for now" />
+    <MESSAGE value="Add error and success views - login user is working correctly" />
+    <MESSAGE value="Add user actions added to the web app" />
+    <MESSAGE value="Add project action to add new project" />
+    <MESSAGE value="New role to user action added" />
+    <MESSAGE value="New actions added - delete project, and show all project but it is not working yet" />
+    <MESSAGE value="Servlet class to show all projects" />
+    <MESSAGE value="New action added - edit document is working" />
+    <MESSAGE value="New action added - delete document is working" />
+    <MESSAGE value="Fix for get all projects action - all actions till now are working correctly" />
+    <MESSAGE value="New action added - show projects for user is working correctly" />
+    <MESSAGE value="New action added - show project details is working correctly" />
+    <MESSAGE value="New action added - show document details is working correctly" />
+    <MESSAGE value="New action added - show documents for user is working correctly. All actions implemented" />
+    <MESSAGE value="Added css for welcome page (login) and add user and add project pages, also added log out button and servlet to handle that logout" />
+    <MESSAGE value="CSS for views of: add user, add project, add role to user, delete project, get all projects, show projects for user, show project details" />
+    <MESSAGE value="CSS for document views - all views are looking good now" />
+    <MESSAGE value="Database fix - connection is good now" />
+    <MESSAGE value="Tests for document service" />
+    <MESSAGE value="Tests for project service" />
+    <MESSAGE value="Tests for user service and userprojectrelation service - all tests are done" />
+    <MESSAGE value="Update for error page" />
+    <MESSAGE value="Added roles restriction to methods" />
+    <MESSAGE value="Fix for button names" />
+    <MESSAGE value="add db schemas" />
+    <option name="LAST_COMMIT_MESSAGE" value="add db schemas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/klonickimaciej$UserProjectRelationServiceImplTest_shouldGetDocumentDetails.ic" NAME="UserProjectRelationServiceImplTest.shouldGetDocumentDetails Coverage Results" MODIFIED="1692252764407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UserProjectRelationServiceImplTest_shouldGetProjectDetails.ic" NAME="UserProjectRelationServiceImplTest.shouldGetProjectDetails Coverage Results" MODIFIED="1692252708126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest_shouldDeleteDocument.ic" NAME="DocumentServiceImplTest.shouldDeleteDocument Coverage Results" MODIFIED="1692251744613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest_shouldCreateNewDocument.ic" NAME="DocumentServiceImplTest.shouldCreateNewDocument Coverage Results" MODIFIED="1692251501264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UserProjectRelationServiceImplTest_shouldGetProjectsForUserByUsername.ic" NAME="UserProjectRelationServiceImplTest.shouldGetProjectsForUserByUsername Coverage Results" MODIFIED="1692252606261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$ProjectServiceImplTest_shouldGetAllProjects.ic" NAME="ProjectServiceImplTest.shouldGetAllProjects Coverage Results" MODIFIED="1692252239808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UsersServiceImplTest.ic" NAME="UsersServiceImplTest Coverage Results" MODIFIED="1692253197905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest_shouldShowDocumentsForUser.ic" NAME="DocumentServiceImplTest.shouldShowDocumentsForUser Coverage Results" MODIFIED="1692251845235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest.ic" NAME="DocumentServiceImplTest Coverage Results" MODIFIED="1692253162255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest_shouldEditDocument.ic" NAME="DocumentServiceImplTest.shouldEditDocument Coverage Results" MODIFIED="1692251590587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$ProjectServiceImplTest_shouldCreateProject.ic" NAME="ProjectServiceImplTest.shouldCreateProject Coverage Results" MODIFIED="1692252092651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UserProjectRelationServiceImplTest_shouldAssignUserRole.ic" NAME="UserProjectRelationServiceImplTest.shouldAssignUserRole Coverage Results" MODIFIED="1692252464176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$ProjectServiceImplTest_shouldDeleteProject.ic" NAME="ProjectServiceImplTest.shouldDeleteProject Coverage Results" MODIFIED="1692252178578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$ProjectServiceImplTest.ic" NAME="ProjectServiceImplTest Coverage Results" MODIFIED="1692253175955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$DocumentServiceImplTest_shouldGetDocumentByTitle.ic" NAME="DocumentServiceImplTest.shouldGetDocumentByTitle Coverage Results" MODIFIED="1692251678974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UsersServiceImplTest_shouldAuthenticateUser.ic" NAME="UsersServiceImplTest.shouldAuthenticateUser Coverage Results" MODIFIED="1692253083151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UserProjectRelationServiceImplTest.ic" NAME="UserProjectRelationServiceImplTest Coverage Results" MODIFIED="1692253188240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/klonickimaciej$UsersServiceImplTest_shouldCreateUser.ic" NAME="UsersServiceImplTest.shouldCreateUser Coverage Results" MODIFIED="1692252941790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.*</FILTER>
+    </SUITE>
+  </component>
+</project>
