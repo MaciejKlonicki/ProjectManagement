@@ -96,6 +96,11 @@
         <p class="error-message"><%= request.getAttribute("errorMessage") %></p>
         <% } %>
     </div>
+    <% if (request.getAttribute("newDescription") != null) { %>
+    <div class="description-display">
+        <p>New Description: <%= request.getAttribute("newDescription") %></p>
+    </div>
+    <% } %>
 </div>
 </body>
 </html>

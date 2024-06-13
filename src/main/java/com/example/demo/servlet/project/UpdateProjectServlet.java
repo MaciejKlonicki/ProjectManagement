@@ -26,10 +26,32 @@ public class UpdateProjectServlet extends HttpServlet {
         try {
             projectService.updateProjectDescription(projectName, newDescription);
             request.setAttribute("successMessage", "Project description updated successfully.");
+            //request.setAttribute("newDescription", newDescription); // TODO: Przesyłanie raw data dalej "<script>alert('XSS');</script>"
+            request.setAttribute("newDescription", escapeHtml(newDescription)); // TODO: Sanityzacja danych przed wysłaniem
         } catch (SQLException e) {
             e.printStackTrace();
             request.setAttribute("errorMessage", "Error updating project description.");
         }
         request.getRequestDispatcher("/updateProject.jsp").forward(request, response);
+    }
+
+
+    private String escapeHtml(String input) {
+        if (input == null) {
+            return null;
+        }
+        StringBuilder escaped = new StringBuilder();
+        for (char c : input.toCharArray()) {
+            switch (c) {
+                case '&' -> escaped.append("&amp;");
+                case '<' -> escaped.append("&lt;");
+                case '>' -> escaped.append("&gt;");
+                case '"' -> escaped.append("&quot;");
+                case '\'' -> escaped.append("&#x27;");
+                case '/' -> escaped.append("&#x2F;");
+                default -> escaped.append(c);
+            }
+        }
+        return escaped.toString();
     }
 }
