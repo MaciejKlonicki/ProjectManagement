@@ -41,7 +41,4 @@ public class LoginUserServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/error.jsp");
         }
     }
-    public void destroy() {
-
-    }
 }

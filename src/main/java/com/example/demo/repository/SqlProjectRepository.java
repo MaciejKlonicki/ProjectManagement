@@ -38,6 +38,17 @@ public class SqlProjectRepository implements ProjectRepository {
             preparedStatement.executeUpdate();
         }
     }
+    public void updateProjectDescription(String projectName, String newDescription) throws SQLException {
+        String query = "UPDATE Project SET description = ? WHERE name = ?";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, newDescription);
+            preparedStatement.setString(2, projectName);
+            preparedStatement.executeUpdate();
+        }
+
+    }
 
     @Override
     public List<Project> getAllProjects() throws SQLException {

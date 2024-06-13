@@ -27,4 +27,9 @@ public class ProjectServiceImpl implements ProjectService {
     public List<Project> getAllProjects() throws SQLException {
         return projectRepository.getAllProjects();
     }
+
+    @Override
+    public void updateProjectDescription(String projectName, String newDescription) throws SQLException {
+        projectRepository.updateProjectDescription(projectName, newDescription);
+    }
 }

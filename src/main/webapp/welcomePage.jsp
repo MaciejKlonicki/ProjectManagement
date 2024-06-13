@@ -88,6 +88,7 @@
         <a class="operation-button" href="get-all-projects-servlet">Get all projects</a>
         <a class="operation-button" href="getProjectsForUser.jsp">Show projects for user</a>
         <a class="operation-button" href="getProjectDetails.jsp">Show project details</a>
+        <a class="operation-button" href="updateProject.jsp">Update project</a>
         <a class="operation-button" href="addDocument.jsp">Add document</a>
         <a class="operation-button" href="chooseDocument.jsp">Edit document</a>
         <a class="operation-button" href="deleteDocument.jsp">Delete document</a>
