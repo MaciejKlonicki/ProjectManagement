@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class SqlProjectRepository implements ProjectRepository {
             preparedStatement.executeUpdate();
         }
     }
-    public void updateProjectDescription(String projectName, String newDescription) throws SQLException {
+/*    public void updateProjectDescription(String projectName, String newDescription) throws SQLException {
         String query = "UPDATE Project SET description = ? WHERE name = ?";
 
         try (Connection connection = DatabaseConnection.getConnection();
@@ -48,6 +49,17 @@ public class SqlProjectRepository implements ProjectRepository {
             preparedStatement.executeUpdate();
         }
 
+    }*/
+
+    // TODO: Podatność SQL Injection "HACKED'; --"
+    public void updateProjectDescription(String projectName, String newDescription) throws SQLException {
+        String query = "UPDATE Project SET description = '" + newDescription + "' WHERE name = '" + projectName + "'";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+            Statement statement = connection.createStatement()) {
+
+            statement.executeUpdate(query); // UPDATE Project SET description = 'Hacked'; -- ' WHERE name = 'Project Alpha'
+        }
     }
 
     @Override
