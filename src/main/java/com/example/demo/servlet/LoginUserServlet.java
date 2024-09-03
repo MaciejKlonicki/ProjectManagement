@@ -18,60 +18,65 @@ import java.util.Optional;
 
 @WebServlet(name = "loginServlet", value = "/login-servlet")
 public class LoginUserServlet extends HttpServlet {
-    private static final int MAX_ATTEMPTS = 3;
-    private static final long LOCK_TIME = 5 * 60 * 1000;
+  private static final int MAX_ATTEMPTS = 3;
+  private static final long LOCK_TIME = 60 * 1000;
 
-    private UsersService usersService;
+  private UsersService usersService;
 
-    public void init() {
-        usersService = new UsersServiceImpl(new SqlUsersRepository());
+  public void init() {
+    usersService = new UsersServiceImpl(new SqlUsersRepository());
+  }
+
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    HttpSession session = request.getSession();
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    Long lockTime = (Long) session.getAttribute("lockTime");
+    if (lockTime != null) {
+      if (System.currentTimeMillis() >= lockTime) {
+        session.removeAttribute("lockTime");
+        session.removeAttribute("attempts");
+      } else {
+        request.setAttribute("errorMessage", "Your account is locked. Please try again later.");
+        request.setAttribute("disabled", "true");
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        return;
+      }
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+    UserLoginDTO userLoginDTO = new UserLoginDTO(username, password);
+    try {
+      Optional<UserProjectRelation> user = usersService.authenticateUser(userLoginDTO);
 
-        Long lockTime = (Long) session.getAttribute("lockTime");
-        if (lockTime != null && System.currentTimeMillis() < lockTime) {
-            request.setAttribute("errorMessage", "Your account is locked. Please try again later.");
-            request.setAttribute("disabled", "true");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
-            return;
+      if (user.isPresent()) {
+        session.removeAttribute("attempts");
+        session.removeAttribute("lockTime");
+        request.getSession().setAttribute("userRole", user.get().getRoles().get(0));
+        response.sendRedirect(request.getContextPath() + "/welcomePage.jsp");
+      } else {
+        Integer attempts = (Integer) session.getAttribute("attempts");
+        if (attempts == null) {
+          attempts = 0;
         }
+        attempts++;
+        session.setAttribute("attempts", attempts);
 
-        UserLoginDTO userLoginDTO = new UserLoginDTO(username, password);
-        try {
-            Optional<UserProjectRelation> user = usersService.authenticateUser(userLoginDTO);
-
-            if (user.isPresent()) {
-                session.removeAttribute("attempts");
-                session.removeAttribute("lockTime");
-                request.getSession().setAttribute("userRole", user.get().getRoles().get(0));
-                response.sendRedirect(request.getContextPath() + "/welcomePage.jsp");
-            } else {
-                Integer attempts = (Integer) session.getAttribute("attempts");
-                if (attempts == null) {
-                    attempts = 0;
-                }
-                attempts++;
-                session.setAttribute("attempts", attempts);
-
-                if (attempts >= MAX_ATTEMPTS) {
-                    session.setAttribute("lockTime", System.currentTimeMillis() + LOCK_TIME);
-                    request.setAttribute("errorMessage", "Your account has been locked for 5 minutes due to too many failed login attempts.");
-                    request.setAttribute("disabled", "true");
-                } else {
-                    request.setAttribute("errorMessage", "Invalid login credentials. You have " + (MAX_ATTEMPTS - attempts) + " attempt(s) left.");
-                    request.setAttribute("disabled", "false");
-                }
-                request.getRequestDispatcher("/login.jsp").forward(request, response);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            request.setAttribute("errorMessage", "An error occurred. Please try again.");
-            request.setAttribute("disabled", "false");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        if (attempts >= MAX_ATTEMPTS) {
+          session.setAttribute("lockTime", System.currentTimeMillis() + LOCK_TIME);
+          request.setAttribute("errorMessage", "Your account has been locked for 5 minutes due to too many failed login attempts.");
+          request.setAttribute("disabled", "true");
+        } else {
+          request.setAttribute("errorMessage", "Invalid login credentials. You have " + (MAX_ATTEMPTS - attempts) + " attempt(s) left.");
+          request.setAttribute("disabled", "false");
         }
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      request.setAttribute("errorMessage", "An error occurred. Please try again.");
+      request.setAttribute("disabled", "false");
+      request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
+  }
 }
