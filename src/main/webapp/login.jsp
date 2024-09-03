@@ -54,17 +54,35 @@
         .login-form input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .error-message {
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+
+        .login-form.disabled input {
+            background-color: #e9ecef;
+            cursor: not-allowed;
+        }
+
+        .login-form.disabled input[type="submit"] {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
 <div class="login-container">
     <h2>Login</h2>
-    <form class="login-form" action="login-servlet" method="post">
+    <form class="login-form <%= request.getAttribute("disabled") != null && request.getAttribute("disabled").equals("true") ? "disabled" : "" %>" action="login-servlet" method="post">
+        <c:if test="${not empty errorMessage}">
+            <p class="error-message">${errorMessage}</p>
+        </c:if>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" <%= request.getAttribute("disabled") != null && request.getAttribute("disabled").equals("true") ? "disabled" : "" %> required>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Log in">
+        <input type="password" id="password" name="password" <%= request.getAttribute("disabled") != null && request.getAttribute("disabled").equals("true") ? "disabled" : "" %> required>
+        <input type="submit" value="Log in" <%= request.getAttribute("disabled") != null && request.getAttribute("disabled").equals("true") ? "disabled" : "" %>>
     </form>
 </div>
 </body>
